@@ -1,0 +1,12 @@
+{
+    "Users": true,
+    "Auth": true,
+    "Categories": true,
+    "Permissions": false,
+    "Countries": true,
+    "Test": true,
+    "Pages": true,
+    "Domains": true,
+    "Templates": true,
+    "Forms": true
+}

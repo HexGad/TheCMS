@@ -1,0 +1,26 @@
+@extends('dashboard.layouts.base')
+@section('toolbar')
+    @include('dashboard.layouts.components.toolbar',[
+        'title' => '$STUDLY_NAME$',
+        'breadcrumbs' => [
+            ['title'=> 'Home', 'url' => url('/dashboard/')],
+            ['title'=> '$STUDLY_NAME$', 'url' => route('dashboard.$LOWER_NAME$.index')],
+            ['title'=> 'Edit $STUDLY_NAME$'],
+        ]
+    ])
+@endsection
+
+@push('styles')
+    {{ module_vite('$LOWER_NAME$', 'resources/assets/sass/app.scss') }}
+@endpush
+
+
+@section('content')
+    <div id="app">
+        <edit :$SINGULAR_LOWER_NAME$-data="{{json_encode($$SINGULAR_LOWER_NAME$)}}"></edit>
+    </div>
+@endsection
+
+@push('scripts')
+    {{ module_vite('$LOWER_NAME$', 'resources/assets/js/app.js') }}
+@endpush

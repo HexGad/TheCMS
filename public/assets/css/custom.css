@@ -1,0 +1,76 @@
+.vue-treeselect__control {
+    padding: 4px !important;
+    color: var(--kt-input-color) !important;
+    background-color: var(--kt-input-bg) !important;
+    border: 1px solid var(--kt-input-border-color) !important;
+}
+
+.vue-treeselect__input {
+    color: var(--kt-input-color);
+}
+
+.vue-treeselect__option--highlight {
+    background: var(--kt-component-hover-bg) !important;
+}
+
+.vue-treeselect__option--selected {
+    background: var(--kt-component-hover-bg) !important;
+}
+
+.vue-treeselect__single-value {
+    color: var(--kt-input-color) !important;
+}
+
+.vue-treeselect__value-container {
+    padding: 7px;
+}
+
+.vue-treeselect__menu {
+    background-color: var(--kt-input-bg) !important;
+    border-color: var(--kt-input-border-color) !important;
+    color: var(--kt-input-color) !important;
+}
+
+/*-------------------------------------------------------------------------------------*/
+
+.m-input-wrapper{
+    background: var(--kt-input-bg) !important;
+    border-color: var(--kt-input-border-color) !important;
+}
+
+.m-input-input {
+    background: var(--kt-input-bg) !important;
+    color: var(--kt-input-color) !important;
+}
+.m-input-label{
+    color: var(--kt-input-color);
+}
+
+.m-select-input__toggle-button > svg > path, .m-input-wrapper-left > svg > path{
+    stroke: var(--kt-input-color) !important;
+}
+.m-select-list__search-wrapper{
+    background: var(--kt-input-bg);
+    border-color: var(--kt-input-border-color);
+}
+.m-select-list__scroll-wrapper{
+    background: var(--kt-input-bg);
+    border-color: var(--kt-input-border-color);
+}
+
+.m-select .m-select-list-item.--is-selected.--primary{
+    background: var(--kt-component-hover-bg) !important;
+    color: var(--kt-input-color) !important;
+}
+
+.m-select .m-select-list-item:hover{
+    background: var(--kt-component-hover-bg) !important;
+    color: var(--kt-input-color) !important;
+}
+.m-select .m-select-list-item{
+    color: var(--kt-input-color) !important;
+}
+
+.m-phone-number-input__select__item > span:nth-child(2){
+    color: var(--kt-input-color) !important;
+}

@@ -1,0 +1,108 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Models\$SINGULAR_NAME$;
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Http\DataTables\$STUDLY_NAME$DataTable;
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Requests\Store$STUDLY_NAME$Request;
+use $MODULE_NAMESPACE$\$STUDLY_NAME$\Http\Requests\Update$STUDLY_NAME$Request;
+use App\Exceptions\ApiException;
+
+use Illuminate\Routing\Controller;
+use Illuminate\Contracts\Support\Renderable;
+use Illuminate\Http\JsonResponse;
+
+class $CLASS$ extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     * @param $STUDLY_NAME$DataTable $datatable
+     * @return Renderable|JsonResponse
+     */
+    public function index($STUDLY_NAME$DataTable $datatable): Renderable|JsonResponse
+    {
+        return $datatable->render('$LOWER_NAME$::index');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     * @return Renderable
+     */
+    public function create(): Renderable
+    {
+        return view('$LOWER_NAME$::create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param Store$STUDLY_NAME$Request $request
+     *
+     * @return JsonResponse
+     * @throws ApiException
+     */
+    public function store(Store$STUDLY_NAME$Request $request): JsonResponse
+    {
+        if($$SINGULAR_LOWER_NAME$ = $SINGULAR_NAME$::create($request->validated()))
+            return response()->json($$SINGULAR_LOWER_NAME$);
+
+        throw new ApiException;
+    }
+
+    /**
+     * Show the specified resource.
+     *
+     * @param $SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$
+     *
+     * @return Renderable
+     */
+    public function show($SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$): Renderable
+    {
+        return view('$LOWER_NAME$::show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param $SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$
+     *
+     * @return Renderable
+     */
+    public function edit($SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$): Renderable
+    {
+        return view('$LOWER_NAME$::edit', compact('$SINGULAR_LOWER_NAME$'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Update$STUDLY_NAME$Request $request
+     * @param $SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$
+     *
+     * @return JsonResponse
+     * @throws ApiException
+     */
+    public function update(Update$STUDLY_NAME$Request $request, $SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$): JsonResponse
+    {
+        if($$SINGULAR_LOWER_NAME$->update($request->validated()))
+            return response()->json($$SINGULAR_LOWER_NAME$);
+
+        throw new ApiException;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param $SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$
+     *
+     * @return JsonResponse
+     * @throws ApiException
+     */
+    public function destroy($SINGULAR_NAME$ $$SINGULAR_LOWER_NAME$): JsonResponse
+    {
+        if($$SINGULAR_LOWER_NAME$->delete())
+            return response()->json($$SINGULAR_LOWER_NAME$);
+
+        throw new ApiException;
+    }
+}
