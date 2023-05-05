@@ -8,5 +8,7 @@
     "Pages": true,
     "Domains": true,
     "Templates": true,
-    "Forms": true
+    "Forms": true,
+    "Articles": true,
+    "Pixels": true
 }
